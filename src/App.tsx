@@ -83,7 +83,7 @@ export default function App() {
             </div>
           ) : (
             <ScrollArea className="h-full" ref={scrollAreaRef}>
-              <div className="px-4 py-4">
+              <div className="px-4 py-8">
                 <div className="flex flex-col gap-4">
                   {messages.map((message) => (
                     <ChatMessage

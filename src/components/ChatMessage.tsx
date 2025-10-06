@@ -21,14 +21,14 @@ export function ChatMessage({ role, content, department, phone, hours, location 
   };
 
   return (
-    <div className={`flex gap-2.5 ${role === "user" ? "justify-end" : "justify-start"}`}>
+    <div className={`flex gap-3 ${role === "user" ? "justify-end" : "justify-start"}`}>
       {role === "assistant" && (
-        <Avatar className="size-9 bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center shrink-0 shadow-sm">
+        <Avatar className="size-8 bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center shrink-0 shadow-sm">
           <Bot className="size-4 text-primary-foreground" />
         </Avatar>
       )}
-      
-      <div className={`flex flex-col gap-3 flex-1 ${role === "user" ? "items-end" : "items-start"}`}>
+
+      <div className={`flex flex-col gap-3 max-w-[75%] ${role === "user" ? "items-end" : "items-start"}`}>
         <div
           className={`rounded-2xl px-4 py-2.5 ${
             role === "user"
@@ -82,7 +82,7 @@ export function ChatMessage({ role, content, department, phone, hours, location 
       </div>
 
       {role === "user" && (
-        <Avatar className="size-9 bg-gradient-to-br from-secondary/80 to-secondary flex items-center justify-center shrink-0 shadow-sm">
+        <Avatar className="size-8 bg-gradient-to-br from-secondary/80 to-secondary flex items-center justify-center shrink-0 shadow-sm">
           <User className="size-4 text-secondary-foreground" />
         </Avatar>
       )}

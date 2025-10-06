@@ -4,7 +4,7 @@ import { Input } from "./components/ui/input";
 import { ScrollArea } from "./components/ui/scroll-area";
 import { ChatMessage } from "./components/ChatMessage";
 import { WelcomeScreen } from "./components/WelcomeScreen";
-import { Send, Loader2 } from "lucide-react";
+import { Send, Loader as Loader2 } from "lucide-react";
 import { getMockResponse } from "./utils/mockResponses";
 
 interface Message {
@@ -69,7 +69,7 @@ export default function App() {
 
   return (
     <div className="size-full flex items-center justify-center bg-gradient-to-br from-primary/5 via-background to-secondary/10">
-      <div className="w-full max-w-[430px] h-full flex flex-col bg-background shadow-2xl">
+      <div className="w-full max-w-[430px] min-w-[430px] h-full flex flex-col bg-background shadow-2xl">
         {/* ヘッダー */}
         <header className="border-b border-border/50 bg-gradient-to-r from-primary to-primary/90 px-4 py-4 shrink-0 shadow-sm">
           <h2 className="text-white text-center app-logo text-2xl">みんまご</h2>

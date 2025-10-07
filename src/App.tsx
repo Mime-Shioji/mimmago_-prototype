@@ -97,13 +97,11 @@ export default function App() {
         </header>
 
         {/* メインコンテンツ */}
-        <div className="flex-1 overflow-hidden">
-          {messages.length === 0 ? (
-            <div className="h-full overflow-y-auto">
+        <div className="flex-1 overflow-hidden min-h-0">
+          <ScrollArea className="h-full" ref={scrollAreaRef}>
+            {messages.length === 0 ? (
               <WelcomeScreen />
-            </div>
-          ) : (
-            <ScrollArea className="h-full" ref={scrollAreaRef}>
+            ) : (
               <div className="px-4 py-4">
                 <div className="flex flex-col gap-4">
                   {messages.map((message) => (
@@ -131,8 +129,8 @@ export default function App() {
                   )}
                 </div>
               </div>
-            </ScrollArea>
-          )}
+            )}
+          </ScrollArea>
         </div>
 
         {/* 入力エリア */}

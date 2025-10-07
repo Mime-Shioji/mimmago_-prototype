@@ -478,6 +478,10 @@
     height: 100%;
   }
 
+  .min-h-0 {
+    min-height: calc(var(--spacing) * 0);
+  }
+
   .w-2\.5 {
     width: calc(var(--spacing) * 2.5);
   }
@@ -578,10 +582,6 @@
 
   .overflow-hidden {
     overflow: hidden;
-  }
-
-  .overflow-y-auto {
-    overflow-y: auto;
   }
 
   .rounded-2xl {
